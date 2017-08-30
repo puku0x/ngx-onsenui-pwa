@@ -1,8 +1,10 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { OnsenModule } from 'ngx-onsenui';
 
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -14,6 +16,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [AppService],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
     }).compileComponents();
   }));
