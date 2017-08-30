@@ -1,0 +1,35 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - node
+
+dist: trusty
+
+cache:
+  directories:
+    - node_modules
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+before_install:
+  - npm install -g @angular/cli
+
+script:
+  - ng test --single-run
+  - ng e2e
+  - ng build --prod --build-optimizer --base-href="https://puku0x.github.io/ngx-onsenui-pwa/"
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist
+  on:
+    branch: master
