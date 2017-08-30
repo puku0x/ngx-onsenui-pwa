@@ -12,27 +12,27 @@ export class ContentPageComponent implements OnInit {
   essentialLinks = [
     {
       label: 'Core Docs',
-      link: 'https://vuejs.org',
+      link: 'https://angular.io/',
       icon: 'fa-book'
     },
     {
       label: 'Gitter Chat',
-      link: 'https://gitter.im/vuejs/vue',
+      link: 'https://gitter.im/angular/angular',
       icon: 'fa-commenting'
     },
     {
       label: 'Forum',
-      link: 'https://forum.vuejs.org',
+      link: 'https://stackoverflow.com/questions/tagged/angular',
       icon: 'ion-chatboxes'
     },
     {
       label: 'Twitter',
-      link: 'https://twitter.com/vuejs',
+      link: 'https://twitter.com/angular',
       icon: 'fa-twitter'
     },
     {
       label: 'Docs for this template',
-      link: 'http://vuejs-templates.github.io/webpack/',
+      link: 'https://github.com/puku0x/ngx-onsenui-pwa',
       icon: 'fa-file-text'
     }
   ];
