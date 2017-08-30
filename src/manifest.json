@@ -14,7 +14,7 @@
     }
   ],
   "start_url": "/ngx-onsenui-pwa/index.html",
-  "background_color": "#ff1a33",
-  "theme_color": "#ff1a33",
+  "background_color": "#f24235",
+  "theme_color": "#f44336",
   "display": "standalone"
 }

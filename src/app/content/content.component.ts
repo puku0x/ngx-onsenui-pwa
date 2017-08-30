@@ -1,7 +1,6 @@
 import { Component, Inject, forwardRef, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 
-
 @Component({
   selector: 'ons-page[content]',
   templateUrl: './content.component.html',
