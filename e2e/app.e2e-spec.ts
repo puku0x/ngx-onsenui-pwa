@@ -9,6 +9,6 @@ describe('ngx-onsenui-pwa App', () => {
 
   it('should display title', () => {
     page.navigateTo();
-    expect(page.getPage1TitleText()).toEqual('ngx-onsenui-pwa');
+    expect(page.getContentTitleText()).toEqual('ngx-onsenui-pwa');
   });
 });

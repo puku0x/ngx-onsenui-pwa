@@ -5,11 +5,7 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getOnsNavigator() {
-    return element(by.css('ons-navigator')).isDisplayed();
-  }
-
-  getPage1TitleText() {
-    return element(by.css('ons-page[page1] ons-toolbar div.center')).getText();
+  getContentTitleText() {
+    return element(by.css('ons-page[content] ons-toolbar div.center')).getText();
   }
 }
