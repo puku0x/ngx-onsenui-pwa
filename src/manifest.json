@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
-  "background_color": "#1976d2",
-  "theme_color": "#1976d2",
+  "start_url": "ngx-onsenui-pwa/index.html",
+  "background_color": "#ff1a33",
+  "theme_color": "#ff1a33",
   "display": "standalone"
 }

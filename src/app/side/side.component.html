@@ -1,0 +1,13 @@
+<ons-toolbar modifier="transparent"></ons-toolbar>
+<div class="header">
+  <img src="../../assets/onsenui-logo.png" alt="onsenui-logo">
+</div>
+<ons-list-title>Onsen UI Essential Links</ons-list-title>
+<ons-list>
+  <ons-list-item modifier="chevron" *ngFor="let item of essentialLinks" (click)="goTo(item.link)">
+    <div class="left">
+      <ons-icon fixed-width [icon]="item.icon"></ons-icon>
+    </div>
+    <div class="center">{{ item.label }}</div>
+  </ons-list-item>
+</ons-list>
