@@ -9,7 +9,6 @@ import { ContentPageComponent } from './content/content.component';
 
 import { AppService } from './app.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
