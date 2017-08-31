@@ -20,7 +20,7 @@ $ npm install
 $ ng serve
 ```
 
-The app will run at [http://localhost:3000](http://localhost:3000).
+The app will run at [http://localhost:4200](http://localhost:4200).
 
 ## How to build
 
