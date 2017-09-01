@@ -1,4 +1,4 @@
-import { Component, Inject, forwardRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class ContentPageComponent implements OnInit {
   essentialLinks = [
     {
       label: 'Core Docs',
-      link: 'https://angular.io/',
+      link: 'https://angular.io/docs',
       icon: 'fa-book'
     },
     {
@@ -21,8 +21,8 @@ export class ContentPageComponent implements OnInit {
     },
     {
       label: 'Forum',
-      link: 'https://stackoverflow.com/questions/tagged/angular',
-      icon: 'ion-chatboxes'
+      link: 'https://groups.google.com/d/forum/angular',
+      icon: 'fa-comments'
     },
     {
       label: 'Twitter',
@@ -30,9 +30,9 @@ export class ContentPageComponent implements OnInit {
       icon: 'fa-twitter'
     },
     {
-      label: 'Docs for this template',
-      link: 'https://github.com/puku0x/ngx-onsenui-pwa',
-      icon: 'fa-file-text'
+      label: 'GitHub',
+      link: 'https://github.com/angular/angular',
+      icon: 'fa-github'
     }
   ];
 

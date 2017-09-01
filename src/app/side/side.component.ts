@@ -20,7 +20,7 @@ export class SidePageComponent implements OnInit {
     {
       label: 'Forum',
       link: 'https://community.onsen.io',
-      icon: 'ion-chatboxes'
+      icon: 'fa-comments'
     },
     {
       label: 'Twitter',

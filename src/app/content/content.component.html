@@ -14,28 +14,26 @@
 <ons-list>
   <ons-list-item *ngFor="let item of essentialLinks" (click)="goTo(item.link)">
     <div class="left">
-      <ons-icon fixed-width [icon]="item.icon"></ons-icon>
+      <ons-icon fixed-width [attr.icon]="item.icon"></ons-icon>
     </div>
     <div class="center">{{ item.label }}</div>
   </ons-list-item>
 </ons-list>
 
 <ons-list-title>Angular Ecosystem</ons-list-title>
-<ons-list>
-  <ons-row>
-    <ons-col>
-      <ons-card (click)="goTo('https://angular.io/guide/router')">Router</ons-card>
-    </ons-col>
-    <ons-col>
-      <ons-card (click)="goTo('https://ngrx.github.io/')">ngrx</ons-card>
-    </ons-col>
-  </ons-row>
-  <ons-row>
-    <ons-col>
-      <ons-card (click)="goTo('https://cli.angular.io/')">Angular CLI</ons-card>
-    </ons-col>
-    <ons-col>
-      <ons-card (click)="goTo('https://github.com/AngularClass/awesome-angular')">awesome-angular</ons-card>
-    </ons-col>
-  </ons-row>
-</ons-list>
+<ons-row>
+  <ons-col>
+    <ons-card (click)="goTo('https://cli.angular.io/')">Angular CLI</ons-card>
+  </ons-col>
+  <ons-col>
+    <ons-card (click)="goTo('https://material.angular.io/')">Angular Material</ons-card>
+  </ons-col>
+</ons-row>
+<ons-row>
+  <ons-col>
+    <ons-card (click)="goTo('https://github.com/ngrx/platform')">@ngrx/platform</ons-card>
+  </ons-col>
+  <ons-col>
+    <ons-card (click)="goTo('https://github.com/AngularClass/awesome-angular')">awesome-angular</ons-card>
+  </ons-col>
+</ons-row>
