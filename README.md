@@ -111,7 +111,7 @@ $ npm install @angular/service-worker
 
 ## References
 - [Progressive Web Apps using the Angular Service Worker](https://bit.ly/pwa-angularsummit-2017) by @webmaxru
-- [PWAs with the Angular](CLIhttps://medium.com/@amcdnl/service-worker-pwas-with-the-angular-cli-98a8f16d62d6) by @amcdn
+- [PWAs with the Angular CLI](https://medium.com/@amcdnl/service-worker-pwas-with-the-angular-cli-98a8f16d62d6) by @amcdn
 - [Angular PWA](https://github.com/laco0416/c92-angular-pwa) by @laco0416
 
 [travis-ci-url]: http://travis-ci.org/puku0x/ngx-onsenui-pwa
