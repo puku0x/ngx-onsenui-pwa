@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { Observable } from 'rxjs/Rx';
+import { Store } from '@ngrx/store';
+import * as menuAction from '../../core/actions/menu.action';
+import * as menuReducer from '../../core/reducers/menu.reducer';
 
 @Component({
   selector: 'ons-page[content]',
@@ -7,7 +10,6 @@ import { AppService } from '../app.service';
   styleUrls: ['./content.component.css']
 })
 export class ContentPageComponent implements OnInit {
-
   essentialLinks = [
     {
       label: 'Core Docs',
@@ -36,16 +38,30 @@ export class ContentPageComponent implements OnInit {
     }
   ];
 
-  constructor(private service: AppService) { }
+  /**
+   * Constructor
+   * @param service
+   */
+  constructor(private store: Store<menuReducer.State>) { }
 
-  menu() {
-    this.service.openMenu();
+  /**
+   * Open menu
+   */
+  openMenu() {
+    this.store.dispatch(new menuAction.Open());
   }
 
+  /**
+   * Go to url
+   * @param url
+   */
   goTo(url) {
     const newWindow = window.open(url, '_blank');
   }
 
+  /**
+   * Initialize
+   */
   ngOnInit() {
   }
 

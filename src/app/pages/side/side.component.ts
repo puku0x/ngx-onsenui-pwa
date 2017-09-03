@@ -34,12 +34,22 @@ export class SidePageComponent implements OnInit {
     }
   ];
 
+  /**
+   * Constructor
+   */
   constructor() { }
 
+  /**
+   * Go to URL
+   * @param url
+   */
   goTo(url) {
     const newWindow = window.open(url, '_blank');
   }
 
+  /**
+   * Initialize
+   */
   ngOnInit() {
   }
 

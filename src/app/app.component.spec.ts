@@ -4,19 +4,20 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { OnsenModule } from 'ngx-onsenui';
 
 import { AppComponent } from './app.component';
-import { AppService } from './app.service';
+import { CoreModule } from './core/core.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        OnsenModule
+        OnsenModule,
+        CoreModule.forRoot()
       ],
       declarations: [
         AppComponent
       ],
-      providers: [AppService],
+      providers: [],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
     }).compileComponents();

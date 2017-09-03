@@ -28,12 +28,12 @@ The app will run at [http://localhost:4200](http://localhost:4200).
 $ ng build --prod
 ```
 
-## How to make a PWA with ngx-onsenui
+## How to make a PWA with Angular CLI
 
 1. Create a new project.
 
 ```
-$ ng new ngx-onsenui-pwa
+$ ng new <App Name>
 ```
 
 2. Install `@angular/service-worker`.
@@ -41,15 +41,9 @@ $ ng new ngx-onsenui-pwa
 $ npm install @angular/service-worker
 ```
 
-3. Install `ngx-onsenui`.
+3. Write your App.
 
-```
-$ npm install onsenui ngx-onsenui
-```
-
-4. Write your App.
-
-5. Make a `manifest.json`. For example,
+4. Make a `manifest.json`. For example,
 ```
 {
   "short_name": "Sample",
@@ -73,12 +67,12 @@ $ npm install onsenui ngx-onsenui
 }
 ```
 
-6. Add a link to `manifest.json` in `index.html`
+5. Add a link to `manifest.json` in `index.html`
 ```
 <link rel="manifest" href="manifest.json">
 ```
 
-7. Add `manifest.json` to `assets` in `.angular-cli.json`.
+6. Add `manifest.json` to `assets` in `.angular-cli.json`.
 ```
 {
   "apps": [
@@ -94,7 +88,7 @@ $ npm install onsenui ngx-onsenui
 }
 ```
 
-8. Enable Service Worker in `.angular-cli.json`.
+7. Enable Service Worker in `.angular-cli.json`.
 ```
 {
   "apps": [

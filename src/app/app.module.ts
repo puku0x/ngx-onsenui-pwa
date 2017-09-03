@@ -2,29 +2,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OnsenModule } from 'ngx-onsenui';
-
+import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
-import { SidePageComponent } from './side/side.component';
-import { ContentPageComponent } from './content/content.component';
+import { MainPageComponent } from './pages/main/main.component';
+import { SidePageComponent } from './pages/side/side.component';
+import { ContentPageComponent } from './pages/content/content.component';
 
-import { AppService } from './app.service';
+/**
+ * Page components
+ */
+const pages = [ MainPageComponent, SidePageComponent, ContentPageComponent ];
 
+/**
+ * App module
+ */
 @NgModule({
   declarations: [
     AppComponent,
-    SidePageComponent,
-    ContentPageComponent
+    ...pages
   ],
   entryComponents: [
-    SidePageComponent,
-    ContentPageComponent
+    ...pages
   ],
   imports: [
     BrowserModule,
     OnsenModule,
+    CoreModule.forRoot()
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
