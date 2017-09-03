@@ -28,7 +28,7 @@ The app will run at [http://localhost:4200](http://localhost:4200).
 $ ng build --prod
 ```
 
-## How to make a PWA
+## How to make a PWA with ngx-onsenui
 
 1. Create a new project.
 
@@ -49,7 +49,7 @@ $ npm install onsenui ngx-onsenui
 
 4. Write your App.
 
-5. Make a `manifest.json` like
+5. Make a `manifest.json`. For example,
 ```
 {
   "short_name": "Sample",
@@ -73,20 +73,37 @@ $ npm install onsenui ngx-onsenui
 }
 ```
 
-6. Add a link to `manifest.json` in meta tag.
+6. Add a link to `manifest.json` in `index.html`
 ```
 <link rel="manifest" href="manifest.json">
 ```
 
-7. Add `manifest.json` to `.angular-cli.json`.
+7. Add `manifest.json` to `assets` in `.angular-cli.json`.
 ```
 {
-  ...,
-  "assets": [
-    "assets",
-    "favicon.ico",
-    "manifest.json"
-  ],
+  "apps": [
+    {
+      ...,
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "manifest.json"
+      ],
+    }
+  ]
+}
+```
+
+8. Enable Service Worker in `.angular-cli.json`.
+```
+{
+  "apps": [
+    {
+      ...,
+      "serviceWorker": true,
+    }
+  ]
+}
 ```
 
 ## Contributing
@@ -97,6 +114,11 @@ $ npm install onsenui ngx-onsenui
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+
+## References
+- [Progressive Web Apps using the Angular Service Worker](https://bit.ly/pwa-angularsummit-2017) by @webmaxru
+- [PWAs with the Angular](CLIhttps://medium.com/@amcdnl/service-worker-pwas-with-the-angular-cli-98a8f16d62d6) by @amcdn
+- [Angular PWA](https://github.com/laco0416/c92-angular-pwa) by @laco0416
 
 [travis-ci-url]: http://travis-ci.org/puku0x/ngx-onsenui-pwa
 [travis-ci-image]: https://travis-ci.org/puku0x/ngx-onsenui-pwa.svg?branch=master
