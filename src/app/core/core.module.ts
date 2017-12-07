@@ -1,23 +1,20 @@
 import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
-import { reducers } from './reducers';
+
+import { MenuService } from './services';
+
 
 /**
  * Core module
  */
 @NgModule({
-  imports: [
-    CommonModule,
-    StoreModule.forRoot(reducers),
-  ],
+  imports: [],
   declarations: []
 })
 export class CoreModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: CoreModule,
-      providers: []
+      providers: [MenuService]
     };
   }
 

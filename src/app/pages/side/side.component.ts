@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ons-page[side]',
   templateUrl: './side.component.html',
-  styleUrls: ['./side.component.css']
+  styleUrls: ['./side.component.scss']
 })
 export class SidePageComponent implements OnInit {
   essentialLinks = [
@@ -40,17 +40,17 @@ export class SidePageComponent implements OnInit {
   constructor() { }
 
   /**
+  * Initialize
+   */
+  ngOnInit() {
+  }
+
+  /**
    * Go to URL
    * @param url
    */
   goTo(url) {
     const newWindow = window.open(url, '_blank');
-  }
-
-  /**
-   * Initialize
-   */
-  ngOnInit() {
   }
 
 }

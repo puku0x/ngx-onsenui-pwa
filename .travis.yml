@@ -22,9 +22,11 @@ before_install:
   - npm install -g @angular/cli
 
 script:
-  - ng test --single-run
+  - ng test --browsers=ChromeHeadless --single-run
   - ng e2e
-  - ng build --prod --build-optimizer --base-href="https://puku0x.github.io/ngx-onsenui-pwa/"
+
+before_deploy:
+  - ng build --prod --base-href="https://puku0x.github.io/ngx-onsenui-pwa/"
 
 deploy:
   provider: pages

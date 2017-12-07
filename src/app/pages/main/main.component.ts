@@ -1,55 +1,46 @@
 import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subscription } from 'rxjs/Rx';
-import { Store } from '@ngrx/store';
-import { SidePageComponent } from '../side/side.component';
-import { ContentPageComponent } from '../content/content.component';
-import * as menuAction from '../../core/actions/menu.action';
-import * as menuReducer from '../../core/reducers/menu.reducer';
+import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+import { takeUntil } from 'rxjs/operators';
+
+import { MenuService } from 'app/core/services';
+import { SidePageComponent } from 'app/pages/side/side.component';
+import { ContentPageComponent } from 'app/pages/content/content.component';
 
 @Component({
   selector: 'ons-page[main]',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.scss']
 })
 export class MainPageComponent implements OnInit, OnDestroy {
-  isMenuOpen$: Observable<boolean>;
-  subscrption: Subscription;
+  onDestroy = new Subject();
   sidePage = SidePageComponent;
   contentPage = ContentPageComponent;
   @ViewChild('splitter') splitter;
 
   /**
    * Constructor
-   * @param store
+   * @param menuService
    */
-  constructor(private store: Store<menuReducer.State>) {
-    this.isMenuOpen$ = store.select(menuReducer.getIsOpen);
-  }
-
-  /**
-   * Callback for preclose event
-   * @param event
-   */
-  onPreClose() {
-    this.store.dispatch(new menuAction.Close());
-  }
+  constructor(private menuService: MenuService) { }
 
   /**
    * Initialize
    */
   ngOnInit() {
-    this.subscrption = this.isMenuOpen$.subscribe(isMenuOpen => {
-      if (isMenuOpen) {
+
+    this.menuService.state$
+      .pipe(takeUntil(this.onDestroy))
+      .subscribe(state => {
         this.splitter.nativeElement.side.open();
-      }
-    });
+      });
   }
 
   /**
    * Finalize
    */
   ngOnDestroy() {
-    this.subscrption.unsubscribe();
+    this.onDestroy.next();
   }
 
 }
