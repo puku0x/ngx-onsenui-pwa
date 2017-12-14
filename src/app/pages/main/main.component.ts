@@ -28,7 +28,6 @@ export class MainPageComponent implements OnInit, OnDestroy {
    * Initialize
    */
   ngOnInit() {
-
     this.menuService.state$
       .pipe(takeUntil(this.onDestroy))
       .subscribe(state => {
