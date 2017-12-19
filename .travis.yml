@@ -23,7 +23,6 @@ before_install:
 
 script:
   - ng test --browsers=ChromeHeadless --single-run
-  - ng e2e
 
 before_deploy:
   - ng build --prod --base-href="https://puku0x.github.io/ngx-onsenui-pwa/"
