@@ -1,0 +1,53 @@
+{
+  "configVersion": 1,
+  "index": "https://puku0x.github.io/ngx-onsenui-pwa/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://puku0x.github.io/ngx-onsenui-pwa/favicon.ico",
+        "https://puku0x.github.io/ngx-onsenui-pwa/index.html",
+        "https://puku0x.github.io/ngx-onsenui-pwa/inline.9201db8ad012b48107c0.bundle.js",
+        "https://puku0x.github.io/ngx-onsenui-pwa/main.c69a8907d342bb8586d6.bundle.js",
+        "https://puku0x.github.io/ngx-onsenui-pwa/polyfills.f039bbc7aaddeebcb9aa.bundle.js",
+        "https://puku0x.github.io/ngx-onsenui-pwa/styles.fe7a94e055c76538d030.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/logo.png",
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/onsenui-logo.png",
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/apple-touch-icon-144x144.png",
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-16x16.png",
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-194x194.png",
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-32x32.png",
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-96x96.png",
+        "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon.ico"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://puku0x.github.io/ngx-onsenui-pwa/inline.9201db8ad012b48107c0.bundle.js": "8b734171bc8b3e0a7c5e4b9061aaaa6f1f49fdf4",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/logo.png": "b8cca00fe53eab96107e2c5ed5365e99ead3550c",
+    "https://puku0x.github.io/ngx-onsenui-pwa/main.c69a8907d342bb8586d6.bundle.js": "3e7caed1cc988a4cf378442e6cc915206129a120",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/onsenui-logo.png": "03007cecced9cbc5bfd3dce0108ddfadd5975e0f",
+    "https://puku0x.github.io/ngx-onsenui-pwa/polyfills.f039bbc7aaddeebcb9aa.bundle.js": "669df48deb7f2148518a6e8e9490ba8ee2db7000",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/apple-touch-icon-144x144.png": "77224dc229075fc690b26658578fdd1c70dc2ca3",
+    "https://puku0x.github.io/ngx-onsenui-pwa/styles.fe7a94e055c76538d030.bundle.css": "ea2b5656f999d66e6cb69aaf3a9a4f26a80fe44c",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-16x16.png": "cc30aff2ff612b8049465c55c6515cf5777ec8c7",
+    "https://puku0x.github.io/ngx-onsenui-pwa/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-194x194.png": "c7c48f063a958e8dcca1d36babbd16618619fa29",
+    "https://puku0x.github.io/ngx-onsenui-pwa/index.html": "765ee00c00d113f7f1e13d5c93a517350cec9c0a",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-32x32.png": "baf2d48c36260045a27b177873dfe69cbc7a833e",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon-96x96.png": "8f74f4c167f98e36fe660095a39a2f1ff24573d5",
+    "https://puku0x.github.io/ngx-onsenui-pwa/assets/images/favicons/favicon.ico": "a14ef3628d595d40631adcf174a0a677e8743dc0"
+  }
+}
